@@ -31,7 +31,7 @@ Node* hashTable::getWord(string s){
     int temp = hash;
 
     while(v[temp].first!=""){
-        temp = hash+pow(addOn,2);
+        temp = hash+addOn*addOn;
         if(temp>v.size()-1){
             temp = temp - v.size()-1;
         }
@@ -50,7 +50,7 @@ void hashTable::remove(string s){
     int temp = hash;
 
     while(1){
-        temp = hash+pow(addOn,2);
+        temp = hash+addOn*addOn;
         if(temp>v.size()-1){
             temp = temp - v.size()-1;
         }
@@ -70,7 +70,7 @@ void hashTable::insert(string s, Node*n){
     int temp = hash;
 
     while(1){
-        temp = hash+pow(addOn,2);
+        temp = hash+addOn*addOn;
         if(temp>v.size()-1){
             temp = temp - v.size()-1;
         }
