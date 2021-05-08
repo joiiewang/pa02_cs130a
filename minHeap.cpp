@@ -79,8 +79,9 @@ Node* minHeap::insert(string s, int c){
             v[compare]->index = num;
 
             current = compare;
+            if(compare ==0) break;
             compare = (compare-1)/2;
-            if(compare <= 0) break;
+            if(compare < 0) break;
         }
     }
     
