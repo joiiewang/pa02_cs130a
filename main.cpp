@@ -17,6 +17,13 @@ int main(int argc, char* argv[]){
     int counter =0;
 
     while(getline(myFile, line, ',')){
+        /*if(line == "572"){
+            for(int i=0; i<h.v.size(); i++){
+                int s = h.v[i].second ? h.v[i].second->counter: 0;
+                cout << h.v[i].first << ',' << s <<  endl;
+            }
+            cout << "_____________________________" << endl;
+        }*/
         if(h.getWord(line)){
             Node* n = h.getWord(line);
             /*for(int i=0;i<m.v.size();i++){

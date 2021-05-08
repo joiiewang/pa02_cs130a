@@ -98,7 +98,7 @@ void minHeap::increaseFrequency(Node* n){
         Node* leftChild = 2*current+1 <v.size() ? v[2*current+1] : nullptr;
         if(!rightChild && !leftChild) break;
         else if(!rightChild){
-            if(v[current]->frequency>leftChild->frequency){
+            if(v[current]->frequency>leftChild->frequency || v[current]->counter < leftChild->counter){
                 //swap nodes
                 Node* temp = v[current];
                 v[current] = v[leftChild->index];
@@ -121,7 +121,7 @@ void minHeap::increaseFrequency(Node* n){
             }
             else lowerFreq = rightChild;
 
-            if(lowerFreq->frequency<v[current]->frequency){
+            if(lowerFreq->frequency<v[current]->frequency || (lowerFreq->frequency == v[current]->frequency && lowerFreq->counter > v[current]->counter)){
                 Node* temp = v[current];
                 v[current] = v[lowerFreq->index];
                 v[lowerFreq->index] = temp;
