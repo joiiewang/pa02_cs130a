@@ -149,7 +149,7 @@ void minHeap::removeMin(){
         Node* leftChild = 2*current+1 <v.size() ? v[2*current+1] : nullptr;
         if(!rightChild && !leftChild) break;
         else if(!rightChild){
-            if(v[current]->frequency>leftChild->frequency || v[current]->counter < leftChild->counter){
+            if(v[current]->frequency>leftChild->frequency || (v[current]->frequency == leftChild->frequency && v[current]->counter < leftChild->counter)){
                 //swap nodes
                 Node* temp = v[current];
                 v[current] = v[leftChild->index];
