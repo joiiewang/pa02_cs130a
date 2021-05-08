@@ -40,7 +40,10 @@ int main(int argc, char* argv[]){
                 /*for(int i=0; i<h.v.size(); i++){
                     cout << h.v[i].first << endl;
                 }
-                cout<<"_____________________"<<endl;*/
+                cout<<"_____________________"<<endl;
+                for(int i=0; i< m.v.size(); i++){
+                    cout <<m.v[i]->word << endl;
+                }*/
             }
             else if(total_words==k){
                 pair<string, Node*> p = m.changeMin(line, counter);
@@ -73,5 +76,6 @@ int main(int argc, char* argv[]){
     //cout << h.getWord("4")->counter << endl;
     output.close();
 
-    return 0;
+    
+    exit(0);
 }
